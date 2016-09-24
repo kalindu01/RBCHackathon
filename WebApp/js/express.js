@@ -30,32 +30,36 @@ function list_investments(investments_array) {
 app.get('/get_investments', function (req, res) {
    // open hte investments file
    var rd = readline.createInterface({
-    input: fs.createReadStream('../investment_request.csv'),
+    input: fs.createReadStream('/Users/JanaMano/Desktop/RBCHackathon/RBCHackathon/WebApp/python/investment_request.csv'),
     output: process.stdout,
     terminal: false
    });
-   r
+   
    // create a 2d array for all the arrays
-   var investments_array = [];
-   var row_in_json = {}
+//   var investments_array = [];
+   
+    var tag = "<ul>";
 
    // read one line at a line
    rd.on('line', function(line) {
       //add it to the array
       var current_row = line.split("|");
+      //console.log(line);
 
-      row_in_json[date] = current_row[0];
-      row_in_json[name] = current_row[1];
-      row_in_json[amount_wanted] = current_row[2];
-      row_in_json[percent] = current_row[3];
+      tag = tag + "<li>" +"{Date: " + current_row[0] 
+        + " Name: " + current_row[1] 
+        + " Amount Needed: " + current_row[2]
+        + " Percent: " + current_row[3] + "}</li>\n";
 
-         
-      investments_array.push(current_row);
+      
+
+   //   investments_array.put(JSON.stringify(row_in_json));
       
    });
-   var tag = list_investments(investments_array);
-
-   res.send(investments_array);
+   //var tag = list_investments(investments_array);
+   tag = tag + "</ul>";
+   console.log(tag);
+   res.send(tag);
 })
 
 var server = app.listen(8081, function () {
