@@ -17,6 +17,9 @@
     overflow: hidden;
 }
 
+body {
+    background-color: #F9F9FF;
+}
 nav {
     max-height: 10px;
 }
@@ -86,3 +89,6 @@ nav {
 }
 
 
+.main-view {
+
+}
