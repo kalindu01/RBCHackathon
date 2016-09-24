@@ -1,0 +1,27 @@
+.logo {
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    max-height: 100px;
+    
+    position: relative;
+    top: -6px;
+}
+
+.navbar-text .navbar-right {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar-brand {
+    overflow: hidden;
+}
+
+nav {
+    max-height: 10px;
+}
+
+.sidebar {
+    height: auto;
+    width: 30%;
+}
