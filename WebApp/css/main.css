@@ -23,5 +23,16 @@ nav {
 
 .sidebar {
     height: auto;
-    width: 30%;
+    width: 20%;
+    margin: 0px 5px 5px 5px;
 }
+
+#profile-picture {
+    margin-bottom: 5px;
+    width: inherit;
+}
+
+.profile-container {
+    width: 100%;
+}
+
