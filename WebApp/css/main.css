@@ -17,6 +17,9 @@
     overflow: hidden;
 }
 
+body {
+    background-color: #F0F8FF;
+}
 nav {
     max-height: 10px;
 }
