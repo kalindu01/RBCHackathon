@@ -23,27 +23,13 @@ nav {
 
 .sidebar {
     height: auto;
-    width: 20%;
-    margin: 0px 5px 5px 5px;
-}
-
-#profile-picture {
-    margin-bottom: 5px;
-    width: inherit;
-    border: solid 2px black;
-}
-
-.profile-container {
-    width: 100%;
+    width: 30%;
 }
 
 .btn {
     background-color: #002888;
     color: #FEDF01;
     font-weight: bold;
-    -webkit-transition-duration: 0.3s; /* Safari */
-    transition-duration: 0.3s;
-    border-color: black;
 }
 
 .btn:hover {
@@ -51,10 +37,3 @@ nav {
     background-color: #FEDF01 !important;
     border-color: #002888; /*set the color you want here*/
 }
-
-.btn:active {
-    color: #002888;
-    background-color: #FEDF01 !important;
-    border-color: #002888; /*set the color you want here*/
-}
-
