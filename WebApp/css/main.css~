@@ -62,7 +62,7 @@ nav {
     background-color: blue;
      
 }
-.red-view {
+.view {
     border-color: #000;
     margin: 0px;
     float: left;
@@ -71,6 +71,8 @@ nav {
     background-color: red;
 }
 
+.list {
+}
 .btn:active {
     color: #002888;
     background-color: #FEDF01 !important;
