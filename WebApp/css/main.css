@@ -22,6 +22,7 @@ nav {
 }
 
 .sidebar {
+    float: left;
     height: auto;
     width: 30%;
 }
@@ -36,4 +37,20 @@ nav {
     color: #002888;
     background-color: #FEDF01 !important;
     border-color: #002888; /*set the color you want here*/
+}
+
+.livefeed {
+    border-color: #000;
+    margin: 1px;
+    float: left;
+    width: 69.8%;
+    height: 600px;
+    background-color: blue;
+     
+}
+.view {
+    position: inherit;
+    width:50px;
+    height:50px:
+    background-color: red;
 }
