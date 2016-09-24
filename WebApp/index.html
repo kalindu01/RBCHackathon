@@ -4,10 +4,9 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
 
         <title> RBC Small Business Portal </title>
     </head>
@@ -32,21 +31,31 @@
             </div><!-- /.container-fluid -->
         </nav>
 
-        <div class="sidebar"> 
-
-            <div class="profile-container">
-                <img id="profile-picture" src="http://www.eonline.com/eol_images/Entire_Site/2015830/rs_641x749-150930134621-don.jpg">
-            </div>
-
-            <ul class="nav nav-pills nav-stacked">
-                <li><a class="btn btn-info btn-block" href="#profile">My Profile</a></li>
-                <li><a class="btn btn-info btn-block" href="#company">Yuge Wall Co.</a></li>
-                <li><a href="#invest" class="btn btn-info btn-block">Invest</a></li>
-
-            </ul>
+<div class="sidebar"> 
+    
+    <div class="profile-container">
+    <img id="profile-picture" src="http://www.eonline.com/eol_images/Entire_Site/2015830/rs_641x749-150930134621-don.jpg">
+    </div>
+    
+    <div id="tabs">
+    <ul class="nav nav-pills nav-stacked">
+      <li><a class="btn btn-info btn-block" href="#profile">My Profile</a></li>
+        <li><a class="btn btn-info btn-block" href="#company">Yuge Wall Co.</a></li>
+      <li><a href="#invest" class="btn btn-info btn-block">Invest</a></li>
+    </ul>
         </div>
-
-        <div id="profile" class="main-view"> </div>
-
-    </body>
+    </div>
+        
+        <div id="profile" class="main-view active-view">
+            profile
+        </div>
+    
+        <div id="company" class="main-view">
+            company
+        </div>
+    
+        <div id="invest" class="main-view">
+            invest
+        </div>
+      </body>
 </html>
