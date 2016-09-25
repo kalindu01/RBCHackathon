@@ -1,7 +1,27 @@
 
 
 $(document).ready(function() {
+    // jana's stuff
+    $(".btn").mouseenter(function() {
+        $(".btn").css("background-color", "red");
+    });
     
+    $(".view").mouseenter(function() {
+        $(this).css("box-shadow","10px 10px 5px #888" );
+    });
+    $(".list").mouseenter(function() {
+        $(this).css("box-shadow","10px 10px 5px #888");
+    });
+    $(".view").mouseleave(function() {
+        $(this).css("box-shadow","0px 0px 0px" );
+    });
+    $(".list").mouseleave(function() {
+        $(this).css("box-shadow","0px 0px 0px");
+    });
+    // jana's stuff ^^
+
+
+
     $(".main-view").hide();
     $(document.getElementById("profile")).show();
     
