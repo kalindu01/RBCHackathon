@@ -87,6 +87,8 @@ line = bp_file.readline()
 
 str_res = ''
 
+result = dict()
+
 for line in bp_file:
     
     array = line.split('|')
