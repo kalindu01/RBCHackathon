@@ -23,6 +23,8 @@ var jasonsList = [];
     var current_row = line.split("|");
     var row_in_json = {};
 
+    console.log(current_row);
+      
     row_in_json["date"] = current_row[0];
     row_in_json["department"] = current_row[1];
     row_in_json["name"] = current_row[2];

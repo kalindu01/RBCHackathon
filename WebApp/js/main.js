@@ -37,23 +37,38 @@ app.controller('investmentsCtrl', function($scope, $http) {
             $scope.myOrderBy = x;
         };
 
-        // $scope.highlight = function(x) {
-        // $http.get("http://127.0.0.1:8081/get_more_info?name="+ x.name).then(function (response) {
-        //     $scope.names = response.data.records;
-        //     alert("HI");
-            
-        //};
         
     });
 });
 
 app.controller('myInvestmentsCtrl', function($scope, $http) {
-    $http.get("http://127.0.0.1:8081/get_more_info?name="+ x.name).then(function (response) {
-        $scope.names = response.data.records;
+    $scope.highlight = function(x) {
+        $http.get("http://127.0.0.1:8081/get_more_info?name="+ x.name).then(function (response) {
+            $scope.myCompany = response.data.records;
+            //console.log($scope.myCompany);
+            
+            hi($scope.myCompany);
+
+            
+            
     });
+    };
+
 });
 
+function hi(myCompany) {
+    var nameI = document.getElementById("nameInv");
+    nameI.innerHTML = myCompany[0]["name"];
+    
+    
+    var descI = document.getElementById("descriptionInv");
+    descI.innerHTML = myCompany[0]["description"];
+    
+    var picI = document.getElementById("imgInv");
+    picI.src = myCompany[0]["url_pic"];
 
+
+};
 
 
 
