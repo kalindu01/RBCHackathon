@@ -36,12 +36,28 @@ app.controller('investmentsCtrl', function($scope, $http) {
         $scope.orderByMe = function(x) {
             $scope.myOrderBy = x;
         };
-        $scope.highlight = function(x) {
-        $http.get("http://127.0.0.1:8081/get_more_info?name="+ x.name).then(function (response) {
-            $scope.names = response.data.records;
-            alert("HI");
+
+        // $scope.highlight = function(x) {
+        // $http.get("http://127.0.0.1:8081/get_more_info?name="+ x.name).then(function (response) {
+        //     $scope.names = response.data.records;
+        //     alert("HI");
             
-        };
+        //};
         
     });
 });
+
+app.controller('myInvestmentsCtrl', function($scope, $http) {
+    $http.get("http://127.0.0.1:8081/get_more_info?name="+ x.name).then(function (response) {
+        $scope.names = response.data.records;
+    });
+});
+
+
+
+
+
+
+
+
+
