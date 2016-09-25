@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
     // jana's stuff
     
@@ -37,3 +35,5 @@ $(document).ready(function() {
 
     });
 });
+
+

@@ -4,16 +4,20 @@ var readline = require('readline');
 
 var app = express();
 
+var path = __dirname.slice(0, -3);
+
 app.get('/', function (req, res) {
-   res.sendFile("/Users/JanaMano/Desktop/RBCHackathon/RBCHackathon/WebApp/index.html");
+    //console.log(__dirname.slice(0. -3) + "/index.html");
+   res.sendFile(path + "/index.html");
 })
 
 app.get('/get_investments', function (req, res) {
 
-  var jsonString  = "";
+var jsonString  = "";
+var finalJason = {};
+var jasonsList = [];
 
-  fs.readFileSync("/Users/JanaMano/Desktop/RBCHackathon/RBCHackathon/WebApp/python/investment_request.csv").toString().split("\n").forEach(function(line) {
-    console.log(line);
+  fs.readFileSync(path + "/python/investment_request.csv").toString().split("\n").forEach(function(line) {
 
   if(line != "") {
     var current_row = line.split("|");
@@ -23,22 +27,20 @@ app.get('/get_investments', function (req, res) {
     row_in_json["name"] = current_row[1];
     row_in_json["amount"] = current_row[2];
     row_in_json["percent"] = current_row[3];
-
-    jsonString = jsonString.concat(JSON.stringify(row_in_json)) + ",";
+    
+    jasonsList.push(row_in_json);
   }
 
 });
-
-jsonString = jsonString.slice(0, -1);
-
-console.log("FINALLLLLLLLLL" + jsonString);
- res.send(jsonString);
-
-})
+//jsonString = jsonString.slice(0, -1);
+//console.log(jsonString)  
+finalJason["records"] = jasonsList;
+res.send(JSON.stringify(finalJason));
+});
 
 var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port
    console.log("Example app listening at http://%s:%s", host, port)
 
-})
+});

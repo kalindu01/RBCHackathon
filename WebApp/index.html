@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
 
         <title> RBC Small Business Portal </title>
@@ -32,11 +33,11 @@
         </nav>
 
         <div class="sidebar"> 
-            
+
             <div class="profile-container">
-            <img id="profile-picture" src="http://www.eonline.com/eol_images/Entire_Site/2015830/rs_641x749-150930134621-don.jpg">
+                <img id="profile-picture" src="http://www.eonline.com/eol_images/Entire_Site/2015830/rs_641x749-150930134621-don.jpg">
             </div>
-            
+
             <div id="tabs">
                 <ul class="nav nav-pills nav-stacked">
                     <li><a class="btn btn-info btn-block" href="#profile">My Profile</a></li>
@@ -45,27 +46,78 @@
                 </ul>
             </div>
         </div>
-        
+
         <div id="profile" class="main-view active-view">
-            
+
         </div>
-    
+
         <div id="company" class="main-view">
             company
         </div>
-    
+
         <div id="invest" class="main-view">
-            
+
             <div class="view">
-            
-                
-        
-             </div>
-             <div class="list">
-                <h3 class="heading">List of Investments</h3>
-                
-             </div>
+                <table class = "table">
+   <caption>Basic Table Layout</caption>
+   
+   <thead>
+      <tr>
+         <th>Name</th>
+         <th>City</th>
+      </tr>
+   </thead>
+   
+   <tbody>
+      <tr>
+         <td>Tanmay</td>
+         <td>Bangalore</td>
+      </tr>
+      
+      <tr>
+         <td>Sachin</td>
+         <td>Mumbai</td>
+      </tr>
+   </tbody>
+	
+</table>
+
+
+
+            </div>
+            <div ng-app="investmentsTable" ng-controller="investmentsCtrl" class="list">
+
+                <table class="table">
+                    <thread>
+                        <tr>
+                            <th> Date </th>
+                            <th> Name </th>
+                            <th> Amount Needed </th>
+                            <th> Percent </th>
+                        </tr>
+                    </thread>
+                    <tr ng-repeat="x in names">
+                        <td> {{ x.date }} </td>
+                        <td> {{ x.name }} </td>
+                        <td> {{ x.amount }} </td>
+                        <td> {{ x.percent }} </td>
+
+
+                    </tr>
+                </table>
+
+            </div>
+            <script>
+                var app = angular.module('investmentsTable', []);
+                app.controller('investmentsCtrl', function($scope, $http) {
+                    $http.get("http://127.0.0.1:8081/get_investments").then(function (response) {
+                        console.log("RECORDS " + response.data.records);
+                        $scope.names = response.data.records;
+                    });
+                });
+            </script>
+
         </div>
-        
-      </body>
+
+    </body>
 </html>

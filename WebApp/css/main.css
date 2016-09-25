@@ -81,18 +81,22 @@ box-shadow: 10px 10px 24px 0px rgba(217,217,217,1);
 }
 .view {
     border-color: #000;
-    margin: 0px;
+    margin-bottom: 5px;
     float: left;
     width: 100%;
     height: 50%;
-    background-color: red;
+    background-color: inherit;
+    border-radius: 5px;
 }
 
 .list {
     border-color: #000;
-    margin: 0px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
     float: left;
     width: 100%;
     height: 50%;
-    background-color: green;
+    background-color: inherit;
+    overflow-y: scroll;
 }
