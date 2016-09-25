@@ -6,17 +6,12 @@ var app = express();
 
 var path = __dirname.slice(0, -3);
 
-app.get('/', function (req, res) {
-    //console.log(__dirname.slice(0. -3) + "/index.html");
-   res.sendFile(path + "/index.html");
-})
-
 app.get('/get_investments', function (req, res) {
 
 var jsonString  = "";
 var finalJason = {};
 var jasonsList = [];
-  console.log(path);
+
   fs.readFileSync(path + "/python/investment_request.csv").toString().split("\n").forEach(function(line) {
 
   if(line != "") {
@@ -32,6 +27,7 @@ var jasonsList = [];
   }
 
 });
+    
 //jsonString = jsonString.slice(0, -1);
 //console.log(jsonString)  
 finalJason["records"] = jasonsList;
@@ -42,5 +38,4 @@ var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port
    console.log("Example app listening at http://%s:%s", host, port)
-
 });

@@ -3,14 +3,11 @@
 
     <head>
         <link href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="js/main.js" type="text/javascript"></script>
         <title>RBC Small Business Portal</title>
     </head>
@@ -56,7 +53,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="main-view active-view" id="profile">
             <!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
             <aside class="profile-card">
@@ -83,29 +80,25 @@
                 </div>
             </aside>
         </div>
-        <div class="main-view" id="invest" >
+        <div class="main-view" ng-app="investmentsTable" ng-controller="investmentsCtrl"  id="invest" >
 
             <div class="view">
-
-
-
+                
             </div>
-            
-            <div ng-app="investmentsTable" ng-controller="investmentsCtrl" class="list">
 
+            <div class="list">
                 <table class="table">
-                    <thread>
-                        <tr>
-                            <th> Date </th>
-                            <th> Name </th>
-                            <th> Amount Needed </th>
-                            <th> Percent </th>
-                        </tr>
-                    </thread>
-                    <tr ng-repeat="x in names">
-                        <td> {{ x.date }} </td>
+                    <tr onClick="">
+                        <th ng-click="orderByMe('date')"> Date </th>
+                        <th ng-click="orderByMe('name')"> Name </th>
+                        <th ng-click="orderByMe('amount')"> Amount Needed </th>
+                        <th ng-click="orderByMe('percent')"> Percent </th>
+                    </tr>
+
+                    <tr ng-repeat=" x in names | orderBy:myOrderBy " ng-click="highlight(x)">
+                        <td> {{ x.date | date}} </td>
                         <td> {{ x.name }} </td>
-                        <td> {{ x.amount }} </td>
+                        <td> {{ x.amount | currency }} </td>
                         <td> {{ x.percent }} </td>
                     </tr>
                 </table>

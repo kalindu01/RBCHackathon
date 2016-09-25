@@ -183,6 +183,10 @@ header h2{
     margin-top: 80px;
 }
 
+tr th {
+    cursor: pointer;
+}
+
 
 .profile-bio p {
     font-family: "Open Sans",sans-serif;
