@@ -41,6 +41,26 @@ nav {
     border: solid 2px black;
 }
 
+.company-container{
+
+    position: absolute;
+    left: 150px;
+    width: 390px;
+    height: 400px;
+    float: left;
+}
+
+.company-name{
+
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 250px;
+    height: 200px;
+    float: left;
+
+}
+
 .profile-container {
     width: 100%;
 }
