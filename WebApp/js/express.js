@@ -16,7 +16,7 @@ app.get('/get_investments', function (req, res) {
 var jsonString  = "";
 var finalJason = {};
 var jasonsList = [];
-
+  console.log(path);
   fs.readFileSync(path + "/python/investment_request.csv").toString().split("\n").forEach(function(line) {
 
   if(line != "") {
