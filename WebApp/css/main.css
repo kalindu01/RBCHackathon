@@ -27,7 +27,7 @@ nav {
 
 .sidebar {
     float: left;
-    height: 600px;
+    height: 800px;
     width: 20%;
     margin: 0px 5px 5px 5px;
     border-style: solid;
@@ -71,7 +71,7 @@ nav {
     margin: 0px;
     float: left;
     width: 78%;
-    height: 600px;
+    height: 800px;
     background-color: none;
    -webkit-box-shadow: 10px 10px 24px 0px rgba(217,217,217,1);
 -moz-box-shadow: 10px 10px 24px 0px rgba(217,217,217,1);
@@ -100,3 +100,63 @@ box-shadow: 10px 10px 24px 0px rgba(217,217,217,1);
     background-color: inherit;
     overflow-y: scroll;
 }
+
+/* go on then, styles go here.. knock yourself out! */
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico|Montserrat:400,700|Open+Sans:400,300italic,300,400italic,600);
+
+body{
+	background-color: #EAEDF1;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 68px 118px rgba(233, 249, 210, 0.5);
+    margin: 50px auto 0;
+    padding: 50px;
+    width: 85%;
+    height: auto;
+    -webkit-box-shadow: 10px 10px 24px 0px rgba(217,217,217,1);
+    -moz-box-shadow: 10px 10px 24px 0px rgba(217,217,217,1);
+    box-shadow: 10px 10px 24px 0px rgba(217,217,217,1);
+}
+
+header img {
+    float: left;
+    height: 90px;
+    width: 90px;
+    margin-right: 30px;
+}
+
+header h1{
+    font-family: "Montserrat",sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 6px;
+    text-transform: uppercase;
+}
+
+
+header h2{
+    font-family: "Montserrat",sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 0;
+}
+
+
+.profile-bio {
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+
+.profile-bio p {
+    font-family: "Open Sans",sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 34px;
+}
+
+
