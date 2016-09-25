@@ -1,94 +1,145 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link href=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
-    rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <script src=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-    </script>
-    <script src="js/main.js" type="text/javascript">
-    </script>
-    <title>RBC Small Business Portal</title>
-</head>
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header"><button aria-expanded="false" class=
-            "navbar-toggle collapsed" data-target=
-            "#bs-example-navbar-collapse-1" data-toggle="collapse" type=
-            "button"><span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span></button> <img class=
-            "navbar-brand logo" src=
-            "http://www.ducks.ca/assets/2015/10/rbc_logo.png"></div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id=
-            "bs-example-navbar-collapse-1">
-                <p class="navbar-text navbar-right">Logged in as Donald J.
-                Trump</p>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    <div class="sidebar">
-        <div class="profile-container"><img id="profile-picture" src=
-        "http://www.eonline.com/eol_images/Entire_Site/2015830/rs_641x749-150930134621-don.jpg"></div>
-        <div id="tabs">
-            <ul class="nav nav-pills nav-stacked">
-                <li>
-                    <a class="btn btn-info btn-block" href="#profile">My
-                    Profile</a>
-                </li>
-                <li>
-                    <a class="btn btn-info btn-block" href="#company">Yuge Wall
-                    Co.</a>
-                </li>
-                <li>
-                    <a class="btn btn-info btn-block" href="#invest">Invest</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="main-view active-view" id="profile">
-        <!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
-        <aside class="profile-card">
-            <header>
-                <!-- the username -->
-                <h1>Donald J. Trump</h1><!-- and role or location -->
-                <h2>Politician</h2>
-                <h2>Age: 70 | Interest: Walls | Specilty: Public Speaker</h2>
-            </header><!-- bit of a bio; who are you? -->
-            <div class="profile-bio">
-                <p>American businessman, television personality, author,
-                politician, and nominee of the Republican Party for President
-                of the United States in the 2016 election.</p>
+
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+              rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="js/main.js" type="text/javascript">
+        </script>
+        <title>RBC Small Business Portal</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button aria-expanded="false" class=
+                            "navbar-toggle collapsed" data-target=
+                            "#bs-example-navbar-collapse-1" data-toggle="collapse" type=
+                            "button"><span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> 
+                    <img class="navbar-brand logo" src=
+                         "http://www.ducks.ca/assets/2015/10/rbc_logo.png"></div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id=
+                     "bs-example-navbar-collapse-1">
+                    <p class="navbar-text navbar-right">Logged in as Donald J. Trump</p>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="sidebar">
+            <div class="profile-container">
+                <img id="profile-picture" 
+                     src="http://www.eonline.com/eol_images/Entire_Site/2015830/rs_641x749-150930134621-don.jpg">
             </div>
-        </aside>
-        <!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
-        <aside class="profile-card" style="height:250px !important;">
-            <header>
-                <!-- the username -->
-                <h2>Invesment History</h2>
-            </header><!-- bit of a bio; who are you? -->
-            <div class="profile-bio">
-                <p>State Grid in 2005<br>Sinopec Group in 2014</p>
+            <div id="tabs">
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a class="btn btn-info btn-block" href="#profile">My
+                            Profile</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-info btn-block" href="#company">Yuge Wall
+                            Co.</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-info btn-block" href="#invest">Invest</a>
+                    </li>
+                </ul>
             </div>
-        </aside>
-    </div>
-    <div class="main-view" id="company">
-        company
-    </div>
-    <div class="main-view" id="invest">
-        <div class="view"></div>
-        <div class="list">
-            <h3 class="heading">List of Investments</h3>
         </div>
-    </div>
-</body>
+        
+        <div class="main-view active-view" id="profile">
+            <!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
+            <aside class="profile-card">
+                <header>
+                    <!-- the username -->
+                    <h1>Donald J. Trump</h1><!-- and role or location -->
+                    <h2>Politician</h2>
+                    <h2>Age: 70 | Interest: Walls | Specialty: Public Speaker</h2>
+                </header><!-- bit of a bio; who are you? -->
+                <div class="profile-bio">
+                    <p>American businessman, television personality, author,
+                        politician, and nominee of the Republican Party for President
+                        of the United States in the 2016 election.</p>
+                </div>
+            </aside>
+            <!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->
+            <aside class="profile-card" style="height:250px !important;">
+                <header>
+                    <!-- the username -->
+                    <h2>Investment History</h2>
+                </header><!-- bit of a bio; who are you? -->
+                <div class="profile-bio">
+                    <p>State Grid in 2005<br>Sinopec Group in 2014</p>
+                </div>
+            </aside>
+        </div>
+        <div class="main-view" id="invest" >
+
+            <div class="view">
+
+
+
+            </div>
+            <div ng-app="investmentsTable" ng-controller="investmentsCtrl" class="list">
+
+                <table class="table">
+                    <thread>
+                        <tr>
+                            <th> Date </th>
+                            <th> Name </th>
+                            <th> Amount Needed </th>
+                            <th> Percent </th>
+                        </tr>
+                    </thread>
+                    <tr ng-repeat="x in names">
+                        <td> {{ x.date }} </td>
+                        <td> {{ x.name }} </td>
+                        <td> {{ x.amount }} </td>
+                        <td> {{ x.percent }} </td>
+
+
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+        <div class="main-view" id="company">
+            <div class="company-container">
+                <img class="company-container" src="https://res.cloudinary.com/teepublic/image/private/s--bn5r5IiE--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1446241016/production/designs/285308_3.jpg">
+            </div>
+
+            <div class="company-name">
+                <h1 class="company-name">Yuge Wall Co.</h1>
+            </div>
+
+            <aside class="profile-card b-descrb">
+                <header>
+                    <!-- the username -->
+                    <h2>Field: Constructions</h2>
+                    <h2>Phone Number: (957) 885-4108</h2>
+                    <h2>Address: 1600 Pennsylvania Ave NW, Washington, DC 20500, United States</h2>
+                    <h2>Revenue: 999999999999 | Revenue growth: 101% | Number of employers: 1</h2>
+                </header><!-- bit of a bio; who are you? -->
+                <div class="profile-bio b-des">
+                    <p>Best wall construction company in the universe since 999BC. We build walls and make you pay for it.</p>
+                </div>
+            </aside>
+        </div>
+
+
+    </body>
+
 </html>
