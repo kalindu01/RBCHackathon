@@ -2,19 +2,10 @@ var express = require('express');
 var fs = require("fs");
 var readline = require('readline');
 
-require("jsdom").env("", function(err, window) {
-    if (err) {
-        console.error(err);
-        return;
-    }
-
-    var $ = require("jquery")(window);
-});
-
 var app = express();
 
 app.get('/', function (req, res) {
-   res.sendFile("/Users/JanaMano/Desktop/RBCHackathon/RBCHackathon/WebApp/index.html");
+   res.sendFile("../index.html");
 })
 
 function list_investments(investments_array) {
@@ -30,15 +21,15 @@ function list_investments(investments_array) {
 app.get('/get_investments', function (req, res) {
    // open hte investments file
    var rd = readline.createInterface({
-    input: fs.createReadStream('/Users/JanaMano/Desktop/RBCHackathon/RBCHackathon/WebApp/python/investment_request.csv'),
+    input: fs.createReadStream('../python/investment_request.csv'),
     output: process.stdout,
     terminal: false
    });
    
    // create a 2d array for all the arrays
     var investments_array = [];
-   
-    var tag = "<ul>";
+    
+    var jsonString  = "";
 
    // read one line at a line
    rd.on('line', function(line) {
@@ -53,12 +44,13 @@ app.get('/get_investments', function (req, res) {
       
       console.log(JSON.stringify(row_in_json));
 
-      investments_array.push(row_in_json);
+      jsonString += JSON.stringify(row_in_json);
       
    });
    //var tag = list_investments(investments_array);
    //tag = tag + "</ul>";
-   res.send(investments_array);
+    console.log(jsonString);
+   res.send(jsonString);
 })
 
 var server = app.listen(8081, function () {
