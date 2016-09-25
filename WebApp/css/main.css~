@@ -27,7 +27,7 @@ nav {
 
 .sidebar {
     float: left;
-    height: 600px;
+    height: 800px;
     width: 20%;
     margin: 0px 5px 5px 5px;
     border-style: solid;
